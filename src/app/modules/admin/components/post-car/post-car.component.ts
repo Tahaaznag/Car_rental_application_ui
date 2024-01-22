@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class PostCarComponent {
   isSpinning: boolean = false;
-  selectedFile: File | null | any;
+  selectedFile: File | any;
   imagePreview: string | ArrayBuffer | null | any;
   listofoption: Array<{ label: string; value: string }> = [];
   listOfBrands = [
@@ -49,15 +49,16 @@ export class PostCarComponent {
       price: [null, Validators.required],
       description: [null, Validators.required],
       year: [null, Validators.required],
+      img:[null, Validators.required],
     });
   }
   postCar() {
     console.log(this.postCarForm.value);
-    console.log('Selected File:', this.selectedFile);
+    console.log('Selected File(before postCar):', this.selectedFile);
     this.isSpinning = true;
     const formData: FormData = new FormData();
     if (this.selectedFile) {
-      formData.append('img', this.selectedFile);
+      formData.append('image', this.selectedFile);
     }
     formData.append('brand', this.postCarForm.get('brand')?.value);
     formData.append('name', this.postCarForm.get('name')?.value);
@@ -87,6 +88,7 @@ export class PostCarComponent {
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
+    console.log('Selected File:',this.selectedFile);
     this.previewImage();
   }
   previewImage() {
