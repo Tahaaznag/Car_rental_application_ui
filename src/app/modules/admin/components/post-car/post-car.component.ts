@@ -49,17 +49,12 @@ export class PostCarComponent {
       price: [null, Validators.required],
       description: [null, Validators.required],
       year: [null, Validators.required],
-      img:[null, Validators.required],
     });
   }
   postCar() {
-    console.log(this.postCarForm.value);
-    console.log('Selected File(before postCar):', this.selectedFile);
     this.isSpinning = true;
     const formData: FormData = new FormData();
-    if (this.selectedFile) {
-      formData.append('image', this.selectedFile);
-    }
+    formData.append('image', this.selectedFile);
     formData.append('brand', this.postCarForm.get('brand')?.value);
     formData.append('name', this.postCarForm.get('name')?.value);
     formData.append('type', this.postCarForm.get('type')?.value);
