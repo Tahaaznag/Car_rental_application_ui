@@ -46,10 +46,10 @@ export class BookCarComponent {
       console.log(data);
       this.isSpinning=true;
       let bookACarDto={
-        toDate:data.toDate,
-        fromDate:data.fromDate,
-        userId:StorageService.getUserId(),
-        carId:this.carId
+        toDate: data.toDate,
+        fromDate: data.fromDate,
+        userId: StorageService.getUserId(),
+        carId: this.carId
       }
       console.log(bookACarDto);
       this.service.bookACar(bookACarDto).subscribe((res)=>{

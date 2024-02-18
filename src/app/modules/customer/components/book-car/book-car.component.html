@@ -18,7 +18,7 @@
     </div>
     </div>
     </div>
-    <nz-spin [nzSpinning]="isSpinning" [nzSize] =" 'large'" nzTip="Working..." style="margin-top: 50px;">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize] ="'large'" nzTip="Working..." style="margin-top: 50px;">
         <div class="dashboard-filter">
         <form [formGroup]="validateForm">
         <div class="filter-grid">
@@ -40,7 +40,7 @@
         </div>
         <div class="filter-select-dropdown filter-fields-width">
             <button class="filterBtn" style="margin-left: 45px;" nz-button nzType="primary"
-            (click)="bookACar(validateForm. value)">Book
+            (click)="bookACar(validateForm.value)">Book
             Car</button>
             </div>
             </div>
