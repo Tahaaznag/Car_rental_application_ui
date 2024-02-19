@@ -21,7 +21,7 @@
     <td>{{booking.days}}</td>
     <td>{{booking.price}}</td>
     <td>
-        <strong [ngStyle]="{'color': booking.bookCarStatus === 'APPROVED' ? 'green' : (booking.bookCarStatus === 'REJECTED' ? 'blue' : 'black')}">
+        <strong [ngStyle]="{'color': booking.bookCarStatus === 'APPROVED' ? 'green' : (booking.bookCarStatus === 'REJECTED' ? 'red' : 'black')}">
             {{ booking.bookCarStatus }}
         </strong>
         
