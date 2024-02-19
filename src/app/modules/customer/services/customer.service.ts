@@ -23,14 +23,23 @@ export class CustomerService {
     })
   }
   bookACar(bookACarDto:any):Observable<any>{
-    return this.http.post(BASIC_URL+"/api/customer/car/book"+bookACarDto,{
+    return this.http.post(BASIC_URL+"/api/customer/cars/book",bookACarDto,{
       headers:this.createAuthorizationHeader()
     })
+  }
+  getBookingsByUserId():Observable<any>{
+    return this.http.get(BASIC_URL+"/api/customer/car/bookings/"+StorageService.getUserId(),{
+      headers:this.createAuthorizationHeader()
+    })
+  }
+  searchCar(searchCarDto: any): Observable<any> {
+    return this.http.post(BASIC_URL + '/api/customer/car/search', searchCarDto, {
+      headers: this.createAuthorizationHeader(),
+    });
   }
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders: HttpHeaders = new HttpHeaders();
     const token = StorageService.getToken();
-    console.log(token);
     if (token) {
       return authHeaders.set('Authorization', 'Bearer ' + token);
     }

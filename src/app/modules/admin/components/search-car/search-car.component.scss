@@ -1,0 +1,98 @@
+.inner-content {
+  padding: 32px;
+  background-color: #f8f8f8;
+  padding-bottom: 60px;
+}
+
+.filter-grid {
+  background: white;
+  box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+.filters-category-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filters-category {
+  margin-bottom: 57px;
+  
+  h5 {
+    font-size: 14px;
+    color: #141a33;
+    margin-bottom: 10px;
+  }
+
+  .filter-badge {
+    background: white;
+    box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    min-width: 111px;
+    height: 30px;
+    padding: 5px;
+    padding-right: 0px;
+    margin: 0px 10px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  p {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  i {
+    font-size: 10px;
+  }
+
+  .ant-btn-circle {
+    min-width: 22px;
+    height: 30px;
+    background: #141a33;
+    border: 18px solid #141a33;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Other styles can be placed here */
+
+.pagination {
+  width: 780px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.child {
+  padding: 20px;
+  width: 780px;
+  background-color: white;
+  background: white;
+  box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0 auto; /* Center the container */
+  margin-bottom: 20px; /* Reduce the bottom margin */
+}
+
+.docDp {
+  height: 130px;
+  width: 130px;
+  float: left;
+  margin-right: 20px; /* Adjust the margin between the image and text */
+}
+
+.docInfo {
+  margin-left: 160px;
+  h3 {
+    padding-top: 8px;
+  }
+}
